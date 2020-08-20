@@ -1,5 +1,3 @@
-# Pacman Java
-
 Welcome to the Pacman Java lesson plan! I hope you find this repository useful for learning and experimenting with code. Before getting started with coding, you will need to set up a proper Java development environment. To do that, you will need to download and install the latest [Java Development Kit](https://www.oracle.com/java/technologies/javase-downloads.html) and a Java IDE. For the IDE, I would recommend [Eclipse](https://www.eclipse.org/downloads/). 
 
 ## Part 1 
