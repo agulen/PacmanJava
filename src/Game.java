@@ -21,7 +21,7 @@ public class Game extends JPanel {
 	// The Graphics parameter is also given to us by the Java system. It supplies us
 	// with many different methods for rendering elements to the screen. 
 	public void paint(Graphics graphics) {
-	    graphics.setColor(Color.green);
+	    graphics.setColor(Color.green);		// Example of using Graphics: 
 		graphics.drawLine(0, 0, 100, 400);  // Draws a line from (0,0) to (100, 400) 
 	} 
 	
