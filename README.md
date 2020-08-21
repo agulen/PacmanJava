@@ -9,7 +9,7 @@ Welcome to the Pacman Java lesson plan! I hope you find this repository useful f
     - Member Variables
         - An integer for a x-coordinate
         - An integer for a y-coordinate
-        - An ImageIcon for a Pacman image
+        - An `Image` for a Pacman image. You can use the `ImageIcon` class to load an image file using a filepath, then call `getImage()` to return an `Image` type.
     - Functions
         - A constructor to initialize the member variables
         - Getter and setter for each member variable
