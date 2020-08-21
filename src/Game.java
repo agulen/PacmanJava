@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 // We will leverage this functionality to create our Pacman game's graphics
 public class Game extends JPanel {
 	private JFrame window = new JFrame("Pacman");
+	private Pacman pacman = new Pacman(0, 0, "img/pacman.jpg");
 	
 	public Game() {
 		window.add(this);						// Displays our Game class in the window
@@ -21,8 +22,7 @@ public class Game extends JPanel {
 	// The Graphics parameter is also given to us by the Java system. It supplies us
 	// with many different methods for rendering elements to the screen. 
 	public void paint(Graphics graphics) {
-	    graphics.setColor(Color.green);
-		graphics.drawLine(0, 0, 100, 400);  // Draws a line from (0,0) to (100, 400) 
+	   pacman.draw(graphics);
 	} 
 	
 	public static void main(String[] args) {
