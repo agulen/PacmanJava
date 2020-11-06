@@ -60,15 +60,19 @@ public class Game extends JPanel implements KeyListener {
 	// this class as a listener (line 25), this function will be automatically
 	// called whenever a key is pressed. 
 	public void keyPressed(KeyEvent e) {		
-		// TODO. One case is given. Add the other 3. 		
 		switch(e.getKeyCode()) {
 			case KeyEvent.VK_LEFT:
+				pacman.setDirection(Direction.Left);
 				break;
-			// case 				
-				
-			// case 				
-				
-			// case 				
+			case KeyEvent.VK_RIGHT:
+				pacman.setDirection(Direction.Right);
+				break;
+			case KeyEvent.VK_UP:
+				pacman.setDirection(Direction.Up);
+				break;
+			case KeyEvent.VK_DOWN:
+				pacman.setDirection(Direction.Down);
+				break;
 				
 		}
 	}
