@@ -1,7 +1,5 @@
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.Toolkit;
-
 import javax.swing.ImageIcon;
 
 public class Pacman {
@@ -15,13 +13,10 @@ public class Pacman {
 	private static Image pacmanUp    = new ImageIcon("img/pacmanup.jpg").getImage();
 	private static Image pacmanDown  = new ImageIcon("img/pacmandown.jpg").getImage();
 	
-	private static int pacmanImageHeight = 20;
-	private static int pacmanImageWidth = 20;
-	
 	public Pacman(int x, int y, String imagePath) {
 		this.x = x; 
 		this.y = y;
-		this.image = new ImageIcon(imagePath).getImage();		
+		this.image = new ImageIcon(imagePath).getImage();
 	}
 	
 	public int getXPosition() {
@@ -54,28 +49,8 @@ public class Pacman {
 		}
 	}
 	
-	// Draws an image of Pacman to the screen.
-	// This method is getting called many times per second.
+	// Draws an image of Pacman to the screen
 	public void draw(Graphics graphics) {
-		graphics.drawImage(this.image, this.x, this.y, null);		
-		updateCoordinates(); 
-	}
-	
-	private void updateCoordinates() {
-		int rightBoundary = Game.BOARD_WIDTH - this.pacmanImageWidth;
-		int bottomBoundary = Game.BOARD_HEIGHT - this.pacmanImageHeight; //May need to account for OS taskbar here
-		
-		if (this.direction == Direction.Left && x > 0) {
-			this.x = this.x - 1; 
-		}
-		if (this.direction == Direction.Right && x < rightBoundary) {
-			this.x = this.x + 1; 
-		}
-		if (this.direction == Direction.Up && y > 0) {
-			this.y = this.y - 1; 
-		}
-		if (this.direction == Direction.Down && y < bottomBoundary) {
-			this.y = this.y + 1; 
-		}
+		graphics.drawImage(this.image, this.x, this.y, null); 
 	}
 }
