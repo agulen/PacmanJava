@@ -34,10 +34,9 @@ public class Game extends JPanel implements KeyListener {
 	// Boilerplate code given at beginning of part 2. 
 	// This method sets up a timer to call the repaint() method, which paints all images again to the screen. 
 	public void initializeAutoPaint() {
-		// Set up a timer to execute repaint() every 17 milliseconds on repeat. 
-		// This will emulate a game running at approximately 60 frames per second. 
-		// As a result, the paint() method below will execute 60 times per second. 
-		timer = new Timer(17, new ActionListener() {
+		// Set up a timer to execute repaint() every 8 milliseconds on repeat.  
+		// As a result, the paint() method below will execute 125 times per second. 
+		timer = new Timer(8, new ActionListener() {
 	      public void actionPerformed(ActionEvent e) {
 	        repaint();
 	      }
