@@ -12,16 +12,19 @@ import javax.swing.Timer;
 // If a class extends JPanel, it is given the ability to render custom graphics to the screen.
 // We will leverage this functionality to create our Pacman game's graphics
 public class Game extends JPanel implements KeyListener {
+	public static final int BOARD_HEIGHT = 500;
+	public static final int BOARD_WIDTH = 500; 
+	
 	private JFrame window = new JFrame("Pacman");
 	private Pacman pacman = new Pacman(0, 0, "img/pacman.jpg");
 	private Timer timer; 
 	
 	public Game() {
-		window.add(this);						// Displays our Game class in the window
-		window.setSize(500, 500); 				// Sets the size of the window that the Java system creates
+		window.add(this);									   // Displays our Game class in the window
+		window.setSize(BOARD_WIDTH, BOARD_HEIGHT); 			   // Sets the size of the window that the Java system creates
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Exits the program if user closes the window 
-		window.setVisible(true);				// Sets the visibility of the window
-		window.setBackground(Color.black);		// Sets the background color of the window
+		window.setVisible(true);							   // Sets the visibility of the window
+		window.setBackground(Color.black);					   // Sets the background color of the window
 		window.addKeyListener(this);
 		initializeAutoPaint(); 
 	}
@@ -56,8 +59,8 @@ public class Game extends JPanel implements KeyListener {
 	}	
 	
 	public void drawGameBackground(Graphics graphics) {
-		graphics.drawRect(0, 0, 500, 500);
-		graphics.fillRect(0, 0, 500, 500);
+		graphics.drawRect(0, 0, BOARD_WIDTH, BOARD_HEIGHT);
+		graphics.fillRect(0, 0, BOARD_WIDTH, BOARD_HEIGHT);
 	}
 	
 	// This function listens for key presses from the keyboard.
