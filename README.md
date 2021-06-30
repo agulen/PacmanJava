@@ -18,3 +18,7 @@ Welcome to the Pacman Java lesson plan! I hope you find this repository useful f
 **You are given:**
 - A `Game` class, which will render a window to the screen for you. Read through the comments to understand how the code works. Try running the program before writing any code to see the window appear.
 - A folder of images, which has an image of Pacman to display
+
+**End of Part 1 - Screenshot**
+
+<img src="../assets/part1_screen.png" width="500"/>
