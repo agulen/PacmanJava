@@ -19,7 +19,7 @@ public class Pacman {
 	public Pacman(int x, int y, Direction direction, String imagePath) {
 		this.x = x; 
 		this.y = y;
-		this.direction = direction; 
+		this.setDirection(direction);
 		this.image = new ImageIcon(imagePath).getImage();
 	}
 	
