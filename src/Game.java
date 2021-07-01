@@ -16,7 +16,7 @@ public class Game extends JPanel implements KeyListener {
 	public static final int BOARD_WIDTH = 500; 
 
 	private JFrame window = new JFrame("Pacman");
-	private Pacman pacman = new Pacman(0, 0, "img/pacman.jpg");
+	private Pacman pacman = new Pacman(0, 0, Direction.Right, "img/pacman.jpg");
 	private Timer timer;
 	
 	public Game() {
@@ -27,7 +27,6 @@ public class Game extends JPanel implements KeyListener {
 		window.setBackground(Color.black);					   // Sets the background color of the window
 		window.addKeyListener(this);
 		initializeAutoPaint();
-		pacman.setDirection(Direction.Right);
 	}
 	
 	// Entry point of program
@@ -66,7 +65,7 @@ public class Game extends JPanel implements KeyListener {
 	
 	// This function listens for key presses from the keyboard.
 	// Since our Game class implements KeyListener and the Window added 
-	// this class as a listener (line 25), this function will be automatically
+	// this class as a listener, this function will be automatically
 	// called whenever a key is pressed. 
 	public void keyPressed(KeyEvent e) {		
 		switch(e.getKeyCode()) {
