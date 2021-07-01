@@ -16,7 +16,7 @@ public class Game extends JPanel implements KeyListener {
 	public static final int BOARD_WIDTH = 500; 
 	
 	private JFrame window = new JFrame("Pacman");
-	private Pacman pacman = new Pacman(0, 0, Direction.Right, "img/pacman.jpg");
+	private Pacman pacman = new Pacman(0, 0);
 	private Timer timer; 
 	
 	public Game() {
