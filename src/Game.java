@@ -10,7 +10,7 @@ public class Game extends JPanel {
 	public static final int BOARD_WIDTH = 500; 
 	
 	private JFrame window = new JFrame("Pacman");
-	private Pacman pacman = new Pacman(0, 0, "img/pacman.jpg");
+	private Pacman pacman = new Pacman(0, 0);
 	
 	public Game() {
 		window.add(this);									   // Displays our Game class in the window

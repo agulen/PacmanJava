@@ -5,12 +5,11 @@ import javax.swing.ImageIcon;
 public class Pacman {
 	private int x; 
 	private int y; 
-	private Image image;
+	private Image image = new ImageIcon("img/pacman.jpg").getImage();
 	
-	public Pacman(int x, int y, String imagePath) {
+	public Pacman(int x, int y) {
 		this.x = x; 
 		this.y = y;
-		this.image = new ImageIcon(imagePath).getImage();
 	}
 	
 	public int getXPosition() {
