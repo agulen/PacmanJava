@@ -16,10 +16,11 @@ public class Pacman {
 	private static int pacmanImageHeight = 20;
 	private static int pacmanImageWidth = 20;
 	
-	public Pacman(int x, int y, String imagePath) {
+	public Pacman(int x, int y, Direction direction, String imagePath) {
 		this.x = x; 
 		this.y = y;
-		this.image = new ImageIcon(imagePath).getImage();		
+		this.direction = direction; 
+		this.image = new ImageIcon(imagePath).getImage();
 	}
 	
 	public int getXPosition() {
