@@ -13,7 +13,7 @@ public class Pacman {
 	private static Image pacmanUp    = new ImageIcon("img/pacmanup.jpg").getImage();
 	private static Image pacmanDown  = new ImageIcon("img/pacmandown.jpg").getImage();
 	
-	public Pacman(int x, int y) {
+	public Pacman(int x, int y, Direction direction) {
 		this.x = x; 
 		this.y = y;
 		this.setDirection(direction);
