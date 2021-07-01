@@ -17,7 +17,7 @@ public abstract class Mover {
 	// inherit from Mover can access the 'image' variable
 	protected Image image;
 
-	public Mover(int x, int y, Direction direction, String imagePath) {
+	public Mover(int x, int y, Direction direction) {
 		this.x = x; 
 		this.y = y;
 		this.setDirection(direction);
