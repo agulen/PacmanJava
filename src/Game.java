@@ -16,7 +16,7 @@ public class Game extends JPanel implements KeyListener {
 	public static final int BOARD_WIDTH = 500; 
 
 	private JFrame window = new JFrame("Pacman");
-	private Pacman pacman = new Pacman(0, 0, Direction.Right, "img/pacman.jpg");
+	private Pacman pacman = new Pacman(0, 0, Direction.Right);
 	private Timer timer; 
 	
 	public Game() {
@@ -27,7 +27,6 @@ public class Game extends JPanel implements KeyListener {
 		window.setBackground(Color.black);					   // Sets the background color of the window
 		window.addKeyListener(this);
 		initializeAutoPaint();
-		pacman.setDirection(Direction.Right);
 	}
 	
 	// Entry point of program
