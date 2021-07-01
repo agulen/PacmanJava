@@ -54,8 +54,14 @@ public class Game extends JPanel implements KeyListener {
 	// The Graphics parameter is also given to us by the Java system. It supplies us
 	// with many different methods for rendering elements to the screen. 
 	public void paint(Graphics graphics) {		
+		drawGameBackground(graphics);
 		pacman.draw(graphics);	   
-	}	
+	}
+	
+	public void drawGameBackground(Graphics graphics) {
+		graphics.drawRect(0, 0, BOARD_WIDTH, BOARD_HEIGHT);
+		graphics.fillRect(0, 0, BOARD_WIDTH, BOARD_HEIGHT);
+	}
 	
 	// This function listens for key presses from the keyboard.
 	// Since our Game class implements KeyListener and the Window added 
