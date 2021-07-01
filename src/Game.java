@@ -27,7 +27,6 @@ public class Game extends JPanel implements KeyListener {
 		window.setBackground(Color.black);					   // Sets the background color of the window
 		window.addKeyListener(this);
 		initializeAutoPaint();
-		pacman.setDirection(Direction.Right);
 	}
 	
 	// Entry point of program
