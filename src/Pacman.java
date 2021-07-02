@@ -12,18 +12,6 @@ public class Pacman {
 		this.y = y;
 	}
 	
-	public int getXPosition() {
-		return this.x; 
-	}
-	
-	public int getYPosition() {
-		return this.y; 
-	}
-	
-	public Image getImage() {
-		return this.image;
-	}
-	
 	// Draws an image of Pacman to the screen
 	public void draw(Graphics graphics) {
 		graphics.drawImage(this.image, this.x, this.y, null); 
