@@ -8,7 +8,7 @@ public class Pacman extends Mover {
 	private static Image pacmanDown  = new ImageIcon("img/pacmandown.jpg").getImage();
 	
 	public Pacman(int x, int y, Direction direction) {
-		super(x, y, direction);		
+		super(x, y, direction);	
 	}
 
 	@Override
