@@ -20,5 +20,5 @@ public abstract class Mover {
 	
 	//TODO: move the following things to this class: 
 	//  Variables: x, y, direction, image, imageWidth, imageHeight
-	//	Functions: setDirection, getXPosition, getYPosition, draw, updateCoordinates
+	//	Functions: setDirection, draw, setImage, updateCoordinates
 }
