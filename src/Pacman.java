@@ -19,20 +19,7 @@ public class Pacman {
 		this.setDirection(direction);
 	}
 	
-	public int getXPosition() {
-		return this.x; 
-	}
-	
-	public int getYPosition() {
-		return this.y; 
-	}
-	
-	public Image getImage() {
-		return this.image;
-	}
-	
-	public void setDirection(Direction direction) {
-		this.direction = direction;
+	public void setImage(Direction direction) {	
 		switch (direction) {
 			case Left:
 				this.image = pacmanLeft;
@@ -51,6 +38,7 @@ public class Pacman {
 	
 	// Draws an image of Pacman to the screen
 	public void draw(Graphics graphics) {
+		this.setImage(this.direction);
 		graphics.drawImage(this.image, this.x, this.y, null); 
 	}
 }
