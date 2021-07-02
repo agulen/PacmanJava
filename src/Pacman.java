@@ -15,27 +15,26 @@ public class Pacman {
 	
 	private static int pacmanImageHeight = 20;
 	private static int pacmanImageWidth = 20;
-	
+
 	public Pacman(int x, int y, Direction direction) {
 		this.x = x; 
 		this.y = y;
-		this.setDirection(direction);
-	}
-	
-	public int getXPosition() {
-		return this.x; 
-	}
-	
-	public int getYPosition() {
-		return this.y; 
-	}
-	
-	public Image getImage() {
-		return this.image;
+		this.direction = direction; 
 	}
 	
 	public void setDirection(Direction direction) {
 		this.direction = direction;
+	}
+	
+	// Draws an image of Pacman to the screen.
+	// This method is getting called many times per second.
+	public void draw(Graphics graphics) {
+		this.setImage(this.direction);
+		graphics.drawImage(this.image, this.x, this.y, null); 
+		updateCoordinates();
+	}
+	
+	private void setImage(Direction direction) {	
 		switch (direction) {
 			case Left:
 				this.image = pacmanLeft;
@@ -50,13 +49,6 @@ public class Pacman {
 				this.image = pacmanDown;
 				break;
 		}
-	}
-	
-	// Draws an image of Pacman to the screen.
-	// This method is getting called many times per second.
-	public void draw(Graphics graphics) {
-		graphics.drawImage(this.image, this.x, this.y, null);		
-		updateCoordinates(); 
 	}
 	
 	private void updateCoordinates() {
