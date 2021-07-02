@@ -34,6 +34,8 @@ public class Pacman {
 		updateCoordinates();
 	}
 	
+	// Sets the image of Pacman to be rendered to the screen.
+	// The image to render depends on the direction Pacman is facing.
 	private void setImage(Direction direction) {	
 		switch (direction) {
 			case Left:
@@ -51,6 +53,8 @@ public class Pacman {
 		}
 	}
 	
+	// Update Pacman's (x,y) position according to the current direction
+	// This will respect the boundaries of the window as well
 	private void updateCoordinates() {
 		int rightBoundary = Game.BOARD_WIDTH - pacmanImageWidth;
 		int bottomBoundary = Game.BOARD_HEIGHT - pacmanImageHeight; //May need to account for OS window's task bar here
