@@ -16,7 +16,11 @@ public class Pacman {
 	public Pacman(int x, int y, Direction direction) {
 		this.x = x; 
 		this.y = y;
-		this.setDirection(direction);
+		this.direction = direction; 
+	}
+	
+	public void setDirection(Direction direction) {
+		this.direction = direction;
 	}
 	
 	public void setImage(Direction direction) {	
