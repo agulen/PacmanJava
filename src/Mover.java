@@ -20,8 +20,7 @@ public abstract class Mover {
 	public Mover(int x, int y, Direction direction) {
 		this.x = x; 
 		this.y = y;
-		this.setDirection(direction);
-		this.setImage(direction);	
+		this.direction = direction;
 	}
 	
 	// Sets the image of the Mover object based on the given direction.
@@ -29,25 +28,15 @@ public abstract class Mover {
 	// must implement their own definitions. 
 	public abstract void setImage(Direction direction);
 	
-	// Returns the X position of the Mover within the window.
-	public int getXPosition() {
-		return this.x; 
-	}
-	
-	// Returns the X position of the Mover within the window.
-	public int getYPosition() {
-		return this.y; 
-	}
-	
 	// Sets the direction of the Mover object and also updates the image shown to the screen
 	public void setDirection(Direction direction) {
 		this.direction = direction;
-		setImage(direction);
 	}
 	
 	// Draws an image of the mover to the screen.
 	// This method is getting called many times per second.
 	public void draw(Graphics graphics) {
+		setImage(direction);
 		graphics.drawImage(this.image, this.x, this.y, null);		
 		updateCoordinates();
 	}

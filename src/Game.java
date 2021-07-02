@@ -14,10 +14,10 @@ import javax.swing.Timer;
 public class Game extends JPanel implements KeyListener {
 	public static final int BOARD_HEIGHT = 500;
 	public static final int BOARD_WIDTH = 500; 
-
+	
 	private JFrame window = new JFrame("Pacman");
 	private Pacman pacman = new Pacman(0, 0, Direction.Right);
-	private Timer timer;
+	private Timer timer; 
 	
 	public Game() {
 		window.add(this);									   // Displays our Game class in the window
