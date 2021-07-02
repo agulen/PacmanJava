@@ -23,7 +23,13 @@ public class Pacman {
 		this.direction = direction;
 	}
 	
-	public void setImage(Direction direction) {	
+	// Draws an image of Pacman to the screen
+	public void draw(Graphics graphics) {
+		this.setImage(this.direction);
+		graphics.drawImage(this.image, this.x, this.y, null); 
+	}
+	
+	private void setImage(Direction direction) {	
 		switch (direction) {
 			case Left:
 				this.image = pacmanLeft;
@@ -38,11 +44,5 @@ public class Pacman {
 				this.image = pacmanDown;
 				break;
 		}
-	}
-	
-	// Draws an image of Pacman to the screen
-	public void draw(Graphics graphics) {
-		this.setImage(this.direction);
-		graphics.drawImage(this.image, this.x, this.y, null); 
 	}
 }
