@@ -33,6 +33,16 @@ public abstract class Mover {
 		this.direction = direction;
 	}
 	
+	// Returns the X position of the Mover
+	public int getXPosition() {
+		return this.x; 
+	}
+	
+	// Returns the Y position of the Mover
+	public int getYPosition() {
+		return this.y; 
+	}
+	
 	// Draws an image of the mover to the screen.
 	// This method is getting called many times per second.
 	public void draw(Graphics graphics) {

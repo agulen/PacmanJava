@@ -57,7 +57,8 @@ public class Game extends JPanel implements KeyListener {
 	public void paint(Graphics graphics) {
 		drawGameBackground(graphics);
 		pacman.draw(graphics);
-		redGhost.draw(graphics);;
+		redGhost.draw(graphics);
+		detectCollision(pacman, redGhost);
 	}	
 	
 	public void drawGameBackground(Graphics graphics) {
@@ -84,6 +85,17 @@ public class Game extends JPanel implements KeyListener {
 				pacman.setDirection(Direction.Down);
 				break;
 				
+		}
+	}
+	
+	private void detectCollision(Pacman pacman, Ghost ghost) {
+		int collisionThreshold = 10; 
+		int xDiff = Math.abs(pacman.getXPosition() - ghost.getXPosition());
+		int yDiff = Math.abs(pacman.getYPosition() - ghost.getYPosition()); 
+		
+		if (xDiff < collisionThreshold && 
+			yDiff < collisionThreshold) {
+			System.out.println("Collision happened");
 		}
 	}
 	
