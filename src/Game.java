@@ -17,7 +17,12 @@ public class Game extends JPanel implements KeyListener {
 	
 	private JFrame window = new JFrame("Pacman");
 	private Pacman pacman = new Pacman(0, 0, Direction.Right);
-	private Ghost redGhost = new Ghost(10, 10, Direction.Down, GhostType.Red);
+	private Ghost[] ghosts = {
+		new Ghost(100, 100, Direction.Down, GhostType.Red),
+		new Ghost(200, 200, Direction.Down, GhostType.Orange),
+		new Ghost(300, 300, Direction.Down, GhostType.Blue),
+		new Ghost(400, 400, Direction.Down, GhostType.Pink)
+	};
 	private Timer timer;
 	
 	public Game() {
@@ -57,9 +62,11 @@ public class Game extends JPanel implements KeyListener {
 	public void paint(Graphics graphics) {
 		drawGameBackground(graphics);
 		pacman.draw(graphics);
-		redGhost.draw(graphics);
-		redGhost.move(); 
-		detectCollision(pacman, redGhost);
+		for (int i = 0; i < ghosts.length; i++) {
+			ghosts[i].draw(graphics);
+			ghosts[i].move(); 
+			detectCollision(pacman, ghosts[i]);
+		}
 	}	
 	
 	public void drawGameBackground(Graphics graphics) {

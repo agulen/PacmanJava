@@ -3,9 +3,15 @@ import javax.swing.ImageIcon;
 import java.util.Random;
 
 // The class represents a Ghost character that moves around the game board
-public class Ghost extends Mover {
-	private final static Image redLeft  = new ImageIcon("img/ghost1red/left.jpg").getImage();
-	private final static Image redRight = new ImageIcon("img/ghost1red/right.jpg").getImage();
+public class Ghost extends Mover { 
+	private final static Image redLeft  	= new ImageIcon("img/ghost1red/left.jpg").getImage();
+	private final static Image orangeLeft   = new ImageIcon("img/ghost2orange/left.jpg").getImage();
+	private final static Image blueLeft  	= new ImageIcon("img/ghost3blue/left.jpg").getImage();
+	private final static Image pinkLeft  	= new ImageIcon("img/ghost4pink/left.jpg").getImage();
+	private final static Image redRight 	= new ImageIcon("img/ghost1red/right.jpg").getImage();
+	private final static Image orangeRight  = new ImageIcon("img/ghost2orange/right.jpg").getImage();
+	private final static Image blueRight    = new ImageIcon("img/ghost3blue/right.jpg").getImage();
+	private final static Image pinkRight    = new ImageIcon("img/ghost4pink/right.jpg").getImage();
 	
 	private GhostType ghostType;
 	private Random random = new Random();
@@ -18,11 +24,20 @@ public class Ghost extends Mover {
 	@Override
 	public void setImage(Direction direction) {
 		boolean directionIsUpOrLeft = (direction == Direction.Up || direction == Direction.Left);
-		if (directionIsUpOrLeft) {
-			this.image = redLeft;
-		}
-		else {
-			this.image = redRight;
+		
+		switch (ghostType) {
+			case Red:
+				this.image = directionIsUpOrLeft ? redLeft : redRight; 
+				break;
+			case Orange:
+				this.image = directionIsUpOrLeft ? orangeLeft : orangeRight; 
+				break;
+			case Blue:
+				this.image = directionIsUpOrLeft ? blueLeft : blueRight; 
+				break;
+			case Pink:
+				this.image = directionIsUpOrLeft ? pinkLeft : pinkRight; 
+				break;
 		}
 	}
 	
