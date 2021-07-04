@@ -58,6 +58,7 @@ public class Game extends JPanel implements KeyListener {
 		drawGameBackground(graphics);
 		pacman.draw(graphics);
 		redGhost.draw(graphics);
+		redGhost.move(); 
 		detectCollision(pacman, redGhost);
 	}	
 	
